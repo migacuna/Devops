@@ -1,11 +1,10 @@
 pipeline{
-    agent any{
-        stages {
-            stages("Hello"){
-                steps{
-                    echo 'Hello my litle grasshopper'
-                    git credentialsId: '69e884dd-1b9e-489d-a40c-9d7d1c237c22', url: 'https://github.com/migacuna/Devops.git'
-                }
+    agent any
+    stages {
+        stage('hello'){
+            steps {
+                echo 'Hello my litle grasshopper'
+                git credentialsId: '69e884dd-1b9e-489d-a40c-9d7d1c237c22', url: 'https://github.com/migacuna/Devops.git'
             }
         }
     }
